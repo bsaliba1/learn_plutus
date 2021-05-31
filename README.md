@@ -7,16 +7,15 @@ GHC is the haskell compiler and it has an interactive mode GHCI. To start the in
 - **infix** function - functions that are sandwiched between two arguments
 - **prefix** function - functions that are before their arguments
 - **definitions** - functions that do not take any arguments
-## Syntax
-### Operations
+## Operations
 - `/=` is for inequality
 - `==` is for equality
-### Functions
-#### Defining Functions
+## Functions
+### Defining Functions
 ```
 <func name> <arg1> <arg2> = <func definition>
 ```
-#### Calling Functions
+### Calling Functions
 ```
 <func name> <arg1> <arg2> <...>
 ```
@@ -30,7 +29,7 @@ We can call functions that take two params as infix if we use backtics like so:
 div 92 10 // results in 9
 92 `div` 10 // results in 9 as well
 ```
-### `if` statements
+## `if` statements
 - `if` statments are expressions (meaning they return a value)
 - `else` part of the statement is mandatory
 ```
@@ -38,7 +37,7 @@ if <condition> then <statement> else <statement>
 // example
 if x > 100 then x else x*2
 ```
-### Lists
+## Lists
 - Lists must be **homogenous** (meaning it must only contain one data type)
 - Strings are just lists of characters, so `"hello"` is just syntactic sugar for `['h','e','l','l','o']`
 - Concatentation is done with `++` operator
@@ -51,7 +50,7 @@ if x > 100 then x else x*2
 "abc" !! 2
 // 'c'
 ```
-#### Operations
+### Operations
 - `>`, `<`, `==` - all compare the first element and if they are equal then the next elements and so on
 - `head` - returns the first element in the list
 - `tail` - returns all elements after the first element in the list
@@ -71,7 +70,7 @@ if x > 100 then x else x*2
 - `repeat` - repeats the same value infinitely
 - `replicate` - repeats the same number `n` times where `n` is a given value
 
-#### List comprehension
+### List comprehension
 Syntax:
 ```
 list = [operation | selection | predicate]
@@ -95,8 +94,9 @@ let adjectives = ["lazy","grouchy","scheming"]
 ```
 removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
 ```
-#### Ranges
+### Ranges
 Syntax:
 ```
 range = [<range_start>,<second_value>..<range_end>]
 ```
+## Tuples
