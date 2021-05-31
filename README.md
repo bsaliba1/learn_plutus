@@ -4,13 +4,13 @@ http://learnyouahaskell.com/starting-out
 ## Compiler
 GHC is the haskell compiler and it has an interactive mode GHCI. To start the interactive mode just use `ghci`
 ## Terminology
-**infix** function - functions that are sandwiched between two arguments
-**prefix** function - functions that are before their arguments
-**definitions** - functions that do not take any arguments
+- **infix** function - functions that are sandwiched between two arguments
+- **prefix** function - functions that are before their arguments
+- **definitions** - functions that do not take any arguments
 ## Syntax
 ### Operations
-`/=` is for inequality
-`==` is for equality
+- `/=` is for inequality
+- `==` is for equality
 ### Functions
 #### Defining Functions
 ```
@@ -52,18 +52,18 @@ if x > 100 then x else x*2
 // 'c'
 ```
 #### Operations
-`>`, `<`, `==` - all compare the first element and if they are equal then the next elements and so on
-`head` - returns the first element in the list
-`tail` - returns all elements after the first element in the list
-`last` - returns the last element in the list
-`init` - returns everything except the last element in the list
-`length` - returns the length of the list
-`null` - returns whether or not a list is empty
-`reverse` - returns the reverse of a list
-`take` - returns the first `n` elements in the list where `n` is the first param
-`drop` - returns everything except the first `n` elements in the list where `n` is the first param
-`maximum` - returns max value in the list
-`minimum` - returns min value in the list
-`sum` - returns the sum of the list
-`product` - returns the product of the list
-`elem` - returns whether or not the given element is found in the list
+- `>`, `<`, `==` - all compare the first element and if they are equal then the next elements and so on
+- `head` - returns the first element in the list
+- `tail` - returns all elements after the first element in the list
+- `last` - returns the last element in the list
+- `init` - returns everything except the last element in the list
+- `length` - returns the length of the list
+- `null` - returns whether or not a list is empty
+- `reverse` - returns the reverse of a list
+- `take` - returns the first `n` elements in the list where `n` is the first param
+- `drop` - returns everything except the first `n` elements in the list where `n` is the first param
+- `maximum` - returns max value in the list
+- `minimum` - returns min value in the list
+- `sum` - returns the sum of the list
+- `product` - returns the product of the list
+- `elem` - returns whether or not the given element is found in the list
