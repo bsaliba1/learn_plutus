@@ -74,9 +74,27 @@ if x > 100 then x else x*2
 #### List comprehension
 Syntax:
 ```
+list = [operation | selection | predicate]
+//example
 list = [x*2 | x <- [1..10], x*2 >= 12]
 ```
-
+- Predicate is used to filter out certain values
+- There can be multiple predicates and multiple selections
+```
+[x*y | x <- [1,2,3], y <- [4,5,6], x /= 1, x /= 4, y/= 4]
+```
+- Also can be used for strings
+```
+let nouns = ["hobo","frog","pope"]
+let adjectives = ["lazy","grouchy","scheming"]
+[adjective ++ " " ++ noun | adjective <- adjectives, noun <- nouns]
+// ["lazy hobo","lazy frog","lazy pope","grouchy hobo","grouchy frog",
+// "grouchy pope","scheming hobo","scheming frog","scheming pope"]
+```
+- Since strings are lists, we can use list comprehension to process strings as well
+```
+removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
+```
 #### Ranges
 Syntax:
 ```
