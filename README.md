@@ -67,3 +67,18 @@ if x > 100 then x else x*2
 - `sum` - returns the sum of the list
 - `product` - returns the product of the list
 - `elem` - returns whether or not the given element is found in the list
+- `cycle` - repeats the same list multiple times
+- `repeat` - repeats the same value infinitely
+- `replicate` - repeats the same number `n` times where `n` is a given value
+
+#### List comprehension
+Syntax:
+```
+list = [x*2 | x <- [1..10], x*2 >= 12]
+```
+
+#### Ranges
+Syntax:
+```
+range = [<range_start>,<second_value>..<range_end>]
+```
