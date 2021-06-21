@@ -100,3 +100,17 @@ Syntax:
 range = [<range_start>,<second_value>..<range_end>]
 ```
 ## Tuples
+- Doesn't have to be homogenous
+- Has a set number of values
+- Can be used with list comprehension
+```
+let triangles = [ (a,b,c) | c <- [1..10], b <- [1..10], a <- [1..10] ] // Gets all triangles with all sides being less than 10
+let rightTriangles = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2] // Gets all right triangles with all sides being less than 10
+let rightTriangles' = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2, a+b+c == 24] // Gets all right triangles with all sides being less than 10 and a perimeter of less than 24
+```
+### Helper functions
+- `fst`: gets first element of a tuple
+- `snd`: gets second element of a tuple
+- `zip`: takes two lists, of potentially different types, and returns a list of tuples (always of the length of the smaller list)
+
+
