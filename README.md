@@ -113,4 +113,23 @@ let rightTriangles' = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + 
 - `snd`: gets second element of a tuple
 - `zip`: takes two lists, of potentially different types, and returns a list of tuples (always of the length of the smaller list)
 
-
+## Types
+- Haskell is statically typed
+- Explicit types always start with a capital letter
+- Type decleration is when you explicitly state the type of a function or variable
+  - ex.
+  ```
+  removeNonUppercase :: [Char] -> [Char]
+  removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
+  ```
+### Common Types
+  - `Int`: Whole numbers (max: 2147483647, min: -2147483648)
+    - More efficient than `Integer`
+  - `Integer`: Whole numbers but unbounded
+    - Less efficient than `Int`
+  - `Float`: Real floating point accurate up to 6 decimal places
+  - `Double`: Real floating point accurate up to 12 decimal places (double the precision!)
+  - `Bool`: Boolean type with two values `True` or `False`
+  - `Char`: Represents a character and is denoted by single quotes `''`
+### Helper functions
+- `:t`: gets the return type of an expression
