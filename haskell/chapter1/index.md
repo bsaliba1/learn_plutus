@@ -13,11 +13,11 @@ GHC is the haskell compiler and it has an interactive mode GHCI. To start the in
 ## Functions
 ### Defining Functions
 ```
-<func name> <arg1> <arg2> = <func definition>
+func_name arg1 arg2 = func_definition
 ```
 ### Calling Functions
 ```
-<func name> <arg1> <arg2> <...>
+func_name arg1 arg2 ...
 ```
 Functions have the highest precendence over any other opertation so the following two operations are the same:
 ```
