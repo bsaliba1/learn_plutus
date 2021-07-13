@@ -4,12 +4,14 @@ http://learnyouahaskell.com/starting-out
 ## Compiler
 GHC is the haskell compiler and it has an interactive mode GHCI. To start the interactive mode just use `ghci`
 ## Terminology
-**infix** function - functions that are sandwiched between two arguments
-**prefix** function - functions that are before their arguments
-**definitions** - functions that do not take any arguments
+- **infix** function - functions that are sandwiched between two arguments
+- **prefix** function - functions that are before their arguments
+- **definitions** - functions that do not take any arguments
+
 ## Operations
 - `/=` is for inequality
 - `==` is for equality
+
 ## Functions
 ### Defining Functions
 ```
@@ -32,6 +34,7 @@ div 92 10 // results in 9
 ## `if` statements
 - `if` statments are expressions (meaning they return a value)
 - `else` part of the statement is mandatory
+
 ```
 if <condition> then <statement> else <statement>
 // example
@@ -46,6 +49,7 @@ if x > 100 then x else x*2
 - Prepending has a time complexity of O(1)
 - Lists are built using prepending meaning `[1,2,3]` is just `1:2:3:[]`
 - To get an element at an index use `!!`
+
 ```
 "abc" !! 2
 // 'c'
