@@ -75,7 +75,7 @@ if x > 100 then x else x*2
 - `replicate` - repeats the same number `n` times where `n` is a given value
 
 ### List comprehension
-Syntax:
+- Syntax:
 ```
 list = [operation | selection | predicate]
 //example
@@ -106,7 +106,7 @@ list = [x*2 | x <- [1..10], x*2 >= 12]
   ```
 
 ### Ranges
-Syntax:
+- Syntax:
 ```
 range = [<range_start>,<second_value>..<range_end>]
 ```
