@@ -1,4 +1,4 @@
-# Learn Haskell
+# Chapter 1
 ## Reference
 http://learnyouahaskell.com/starting-out
 ## Compiler
