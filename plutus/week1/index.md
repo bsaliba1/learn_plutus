@@ -1,6 +1,11 @@
 # Week 1
 ## Basic UTxO
 - UTxO = "Unspent Transaction Output Model"
+- Pieces of a transaction:
+  - Public input address
+  - Public output address
+  - Transaction amount
+  - Signature
 - Input amount of a transaction should equal the output amount
 - If Alice has one UTxO of 100 ADA and wants to send 10 ADA to Bob then the transaction would look as such:
   - Input: (Alice) 100 ADA
@@ -8,7 +13,23 @@
 - To authenticate transactions, signatures are sent with a transaction
 
 ## (E)UTxO
+- [IOHK Paper](https://api.zotero.org/groups/478201/items/T24L95MI/file/view?key=Qcjdk4erSuUZ8jvAah59Asef)
 - (E)UTxO = "Extended Unspent Transaction Output Model"
-- Description: Instead of just having an address that corresponds to a public key that can be verified by a signature that is added to the transaction, we have more general addresses, not based on public keys or the hashes of public keys, but instead contain arbitrary logic which decides under which conditions a particular UTxO can be spent by a particular transaction.
+- Pieces of a transaction:
+  - Public input address
+  - Public output address
+  - Input script
+  - Redeemer
+  - Transaction amount
+  - Datum
+  - Validator
+- Input script: Instead of using public key addresses we use Plutus scripts. This arbitrary input script has access to the complete state of the blockchain but can't see the whole transaction that is being validated.
+- Redeemer: Instead of signing transactions we use arbitrary logic known as a 'redeemer'
+- Datum: An arbitrary piece of data that is attached to an address
+- Validator: Can check whether or not a transaction will validate in your wallet before sending it to the chain
+  - This is not the case in Ethereum which is the reason why you still have to pay gas fees for failed transactions
+
+
+
 
 
