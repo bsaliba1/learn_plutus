@@ -153,5 +153,6 @@ range = [<range_start>,<second_value>..<range_end>]
 - Known as generics in other languages
 - Functions that utilize type variables are known as **polymorphic functions**
 - Easily allows us to write general functions that don't use type specific behaviour
+
 ### Helper functions
 - `:t`: gets the return type of an expression
