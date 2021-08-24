@@ -30,16 +30,17 @@
 
 ## Plutus
 ### On-Chain Code
-- Definition: Scripts with corresponding addresses, that determine whether or not a transaction will be valid given the input
-- Language: Haskell (compiles into Plutus Core)
-- Execution Time: When a transaction attempts to consume the script address as input
-- Output: Sucess or Failure. Only if the script succeeds does the transaction get validated by a node. Only if the transaction is validated does it get accepted into the mempool.
+- **Definition:** Scripts with corresponding addresses, that determine whether or not a transaction will be valid given the input
+- **Language:** Haskell (compiles into Plutus Core)
+- **Execution Time:** When a transaction attempts to consume the script address as input
+- **Output:** Sucess or Failure. Only if the script succeeds does the transaction get validated by a node. Only if the transaction is validated does it get accepted into the mempool.
 
 ### Off-chain Code
-- Definition: Code that constructs valid transaction
-- Language: Haskell
-- Execution Time: ?
-- Output: Valid transaction
+- **Definition:** Code that constructs valid transaction
+- **Language:** Haskell
+- **Execution Time:** ?
+- **Output:** Valid transaction
+
 
 
 
