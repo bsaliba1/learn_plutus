@@ -22,10 +22,10 @@
   - Transaction amount
   - Datum
   - Validator
-- Input script address: Instead of using public key addresses we use Plutus scripts. This arbitrary input script has access to the complete state of the blockchain but can't see the whole transaction that is being validated.
-- Redeemer: Instead of signing transactions we use arbitrary logic known as a 'redeemer'
-- Datum: An arbitrary piece of data that is attached to an address
-- Validator: Can check whether or not a transaction will validate in your wallet before sending it to the chain
+- **Input script address:** Instead of using public key addresses we use Plutus scripts. This arbitrary input script has access to the complete state of the blockchain but can't see the whole transaction that is being validated.
+- **Redeemer** -> Instead of signing transactions we use arbitrary logic known as a 'redeemer'
+- **Datum** -> An arbitrary piece of data that is attached to an address
+- **Validator** -> Checks whether or not a transaction will validate in your wallet before sending it to the chain
   - This is not the case in Ethereum which is the reason why you still have to pay gas fees for failed transactions
 
 ## Plutus
