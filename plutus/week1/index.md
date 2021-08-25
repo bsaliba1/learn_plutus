@@ -36,11 +36,8 @@
 - **Output:** Sucess or Failure. Only if the script succeeds does the transaction get validated by a node. Only if the transaction is validated does it get accepted into the mempool.
 
 ### Off-chain Code
-- **Definition:** Code that constructs valid transaction
+- **Definition:** Code that constructs valid transaction. Gets executed in the wallet
 - **Language:** Haskell
-- **Execution Time:** ?
+- **Execution Time:** When the transaction needs to be built and sent on the chain for validation.
 - **Output:** Valid transaction
-
-
-
 
