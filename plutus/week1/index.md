@@ -16,6 +16,7 @@
 ## (E)UTxO
 - [IOHK Paper](https://api.zotero.org/groups/478201/items/T24L95MI/file/view?key=Qcjdk4erSuUZ8jvAah59Asef)
 - (E)UTxO = "Extended Unspent Transaction Output Model"
+- "Extended" because it adds a new type of address, **script addresses**
 - Pieces of a transaction:
   - Public input script address
   - Public output key address
