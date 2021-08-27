@@ -2,7 +2,7 @@
 ## Reference
 http://learnyouahaskell.com/starting-out
 ## Compiler
-GHC is the haskell compiler and it has an interactive mode GHCI. To start the interactive mode just use `ghci`
+Glasgow Haskell Compiler (GHC) is the haskell compiler and it has an interactive mode GHCI. To start the interactive mode just use `ghci`
 ## Terminology
 - **infix** function - functions that are sandwiched between two arguments
 - **prefix** function - functions that are before their arguments
