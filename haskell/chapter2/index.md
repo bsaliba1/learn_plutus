@@ -45,11 +45,11 @@ ghci> :t (==)
 - We see a new thing here, the `=>` symbol. Everything before the `=>` symbol is called a **class constraint**.
 - The `Eq` typeclass provides an interface for testing for equality.
 
-### `Eq`
--  used for types that support equality testing
+### Types of typeclasses
+#### `Eq` is for types that support equality testing
 
-### `Ord` is for types that have an ordering
-### `Show` is for presenting a type as a string
+#### `Ord` is for types that have an ordering
+#### `Show` is for presenting a type as a string
 	- most function for dealing with the `Show` typeclass is `show`
 	```
 	ghci> show 3
@@ -58,7 +58,7 @@ ghci> :t (==)
 	"True"
 	```
 
-### `Read` is used for converting a string to a type
+#### `Read` is used for converting a string to a type
 - most function for dealing with the `Read` typeclass is `read`
 - Using implicit typing
 ```
@@ -86,7 +86,7 @@ ghci> read "(3, 'a')" :: (Int, Char)
 (3, 'a')
 ```
 
-### `Enum` members are sequentially ordered types
+#### `Enum` members are sequentially ordered types
 - `succ` gets the next enum
 - `pred` gets the previous enum
 ```
@@ -100,7 +100,7 @@ ghci> succ 'B'
 'C'
 ```
 
-### `Bounded` members have an upper and a lower bound.
+#### `Bounded` members have an upper and a lower bound.
 ```
 ghci> minBound :: Int
 -2147483648
@@ -114,7 +114,7 @@ False
 
 - `minBound` and `maxBound` are useful functions
 
-### `Num` can act as numbers
+#### `Num` can act as numbers
 - contains all real numbers and integral numbers (whole numbers)
 - whole numbers can act like any type contained in the `Num` typeclass
 - To join `Num`, a type must already be friends with `Show` and `Eq`.
@@ -130,6 +130,7 @@ ghci> 20 :: Double
 20.0
 ```
 
-### `Integral` contains only whole numbers
+#### `Integral` contains only whole numbers
 - this typeclass includes `Int` and `Integer`
-### `Floating` contains `Double` and `Float`
+
+#### `Floating` contains `Double` and `Float`
