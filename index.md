@@ -4,4 +4,5 @@
 ### [Week 2](./plutus/week2/index.md)
 # Haskell
 ### [Chapter1](./haskell/chapter1/index.md)
+### [Chapter2](./haskell/chapter2/index.md)
 
