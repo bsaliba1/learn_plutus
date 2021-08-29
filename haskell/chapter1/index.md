@@ -1,4 +1,5 @@
 # Chapter 1
+[<- Back to Homepage](../../index.md)
 ## Reference
 http://learnyouahaskell.com/starting-out
 ## Compiler
@@ -126,33 +127,3 @@ range = [<range_start>,<second_value>..<range_end>]
 - `fst`: gets first element of a tuple
 - `snd`: gets second element of a tuple
 - `zip`: takes two lists, of potentially different types, and returns a list of tuples (always of the length of the smaller list)
-
-## Types
-- Haskell is statically typed
-- Explicit types always start with a capital letter
-- Type decleration is when you explicitly state the type of a function or variable
-  - ex.
-
-    ```
-    removeNonUppercase :: [Char] -> [Char]
-    removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
-    ```
-
-### Common Types
-  - `Int`: Whole numbers (max: 2147483647, min: -2147483648)
-    - More efficient than `Integer`
-  - `Integer`: Whole numbers but unbounded
-    - Less efficient than `Int`
-  - `Float`: Real floating point accurate up to 6 decimal places
-  - `Double`: Real floating point accurate up to 12 decimal places (double the precision!)
-  - `Bool`: Boolean type with two values `True` or `False`
-  - `Char`: Represents a character and is denoted by single quotes `''`
-
-### Type Variables
-- Variables used in type declarations that can be used to denote any type
-- Known as generics in other languages
-- Functions that utilize type variables are known as **polymorphic functions**
-- Easily allows us to write general functions that don't use type specific behaviour
-
-### Helper functions
-- `:t`: gets the return type of an expression
