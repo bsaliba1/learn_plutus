@@ -130,5 +130,3 @@ ghci> 20 :: Double
 ### `Integral` contains only whole numbers
 - this typeclass includes `Int` and `Integer`
 ### `Floating` contains `Double` and `Float`
-
-
