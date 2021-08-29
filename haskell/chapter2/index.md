@@ -47,6 +47,7 @@ ghci> :t (==)
 
 ### `Eq`
 -  used for types that support equality testing
+
 ### `Ord` is for types that have an ordering
 ### `Show` is for presenting a type as a string
 	- most function for dealing with the `Show` typeclass is `show`
@@ -112,6 +113,7 @@ False
 ```
 
 - `minBound` and `maxBound` are useful functions
+
 ### `Num` can act as numbers
 - contains all real numbers and integral numbers (whole numbers)
 - whole numbers can act like any type contained in the `Num` typeclass
@@ -127,6 +129,7 @@ ghci> 20 :: Float
 ghci> 20 :: Double
 20.0
 ```
+
 ### `Integral` contains only whole numbers
 - this typeclass includes `Int` and `Integer`
 ### `Floating` contains `Double` and `Float`
