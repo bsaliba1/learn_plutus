@@ -15,20 +15,20 @@ Glasgow Haskell Compiler (GHC) is the haskell compiler and it has an interactive
 
 ## Functions
 ### Defining Functions
-```
+```haskell
 func_name arg1 arg2 = func_definition
 ```
 ### Calling Functions
-```
+```haskell
 func_name arg1 arg2 ...
 ```
 Functions have the highest precendence over any other opertation so the following two operations are the same:
-```
+```haskell
 max 9 10 + min 2 3
 (max 9 10) + (min 2 3)
 ```
 We can call functions that take two params as infix if we use backtics like so:
-```
+```haskell
 div 92 10 // results in 9
 92 `div` 10 // results in 9 as well
 ```
@@ -36,7 +36,7 @@ div 92 10 // results in 9
 - `if` statments are expressions (meaning they return a value)
 - `else` part of the statement is mandatory
 
-```
+```haskell
 if <condition> then <statement> else <statement>
 // example
 if x > 100 then x else x*2
@@ -51,7 +51,7 @@ if x > 100 then x else x*2
 - Lists are built using prepending meaning `[1,2,3]` is just `1:2:3:[]`
 - To get an element at an index use `!!`
 
-```
+```haskell
 "abc" !! 2
 // 'c'
 ```
@@ -77,7 +77,7 @@ if x > 100 then x else x*2
 
 ### List comprehension
 - Syntax:
-```
+```haskell
 list = [operation | selection | predicate]
 //example
 list = [x*2 | x <- [1..10], x*2 >= 12]
@@ -86,13 +86,13 @@ list = [x*2 | x <- [1..10], x*2 >= 12]
 - Predicate is used to filter out certain values
 - There can be multiple predicates and multiple selections
 
-  ```
+  ```haskell
   [x*y | x <- [1,2,3], y <- [4,5,6], x /= 1, x /= 4, y/= 4]
   ```
 
 - Also can be used for strings
 
-  ```
+  ```haskell
   let nouns = ["hobo","frog","pope"]
   let adjectives = ["lazy","grouchy","scheming"]
   [adjective ++ " " ++ noun | adjective <- adjectives, noun <- nouns]
@@ -102,13 +102,13 @@ list = [x*2 | x <- [1..10], x*2 >= 12]
 
 - Since strings are lists, we can use list comprehension to process strings as well
 
-  ```
+  ```haskell
   removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
   ```
 
 ### Ranges
 - Syntax:
-```
+```haskell
 range = [<range_start>,<second_value>..<range_end>]
 ```
 
@@ -117,7 +117,7 @@ range = [<range_start>,<second_value>..<range_end>]
 - Has a set number of values
 - Can be used with list comprehension
 
-  ```
+  ```haskell
   let triangles = [ (a,b,c) | c <- [1..10], b <- [1..10], a <- [1..10] ] // Gets all triangles with all sides being less than 10
   let rightTriangles = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2] // Gets all right triangles with all sides being less than 10
   let rightTriangles' = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2, a+b+c == 24] // Gets all right triangles with all sides being less than 10 and a perimeter of less than 24
