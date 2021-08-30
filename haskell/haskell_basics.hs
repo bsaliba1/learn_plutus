@@ -7,6 +7,9 @@ removeOddNumbers xxs = [ [x | x <- xs, even x] | xs <- xxs]
 removeNonUppercase :: [Char] -> [Char]
 removeNonUppercase st =
 	[c | c <- st, c `elem` ['A'..'Z']]
+sum' :: (Num a) => [a] -> a
+sum' [] = 0
+sum' (x:xs) = x + (sum' xs)
 
 -- Sample Problems
 -- Problem 1
