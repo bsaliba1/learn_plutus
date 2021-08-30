@@ -62,9 +62,9 @@ a `myCompare` b
     | otherwise = LT
 ```
 
-## `where`
+## 'Where'
 - Used after function definition (and after guards if they exist) to define several names or functions, that are visible within the function and guards
-```
+```haskell
 bmiTell :: (RealFloat a) => a -> a -> String
 bmiTell weight height
     | bmi <= skinny = "You're underweight, you emo, you!"
