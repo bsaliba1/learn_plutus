@@ -23,3 +23,12 @@ myLast' lst = head (reverse lst)
 mySecondLast [x,y] = x
 mySecondLast (x:xs) = mySecondLast xs
 mySecondLast' lst = head (reverse (init lst))
+
+-- Problem 3
+-- Get the Kth element of a list
+elementAt :: (Num b, Ord b) => [a] -> b -> a
+elementAt lst index
+	| index == 1 = x
+	| index > 1 = elementAt xs (index-1)
+	| otherwise = error "'elementAt' cannot take a negative index"
+	where (x:xs) = lst
