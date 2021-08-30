@@ -62,7 +62,7 @@ a `myCompare` b
     | otherwise = LT
 ```
 
-## 'Where'
+## "Where"
 - Used after function definition (and after guards if they exist) to define several names or functions, that are visible within the function and guards
 ```haskell
 bmiTell :: (RealFloat a) => a -> a -> String
