@@ -5,4 +5,5 @@
 # Haskell
 ### [Chapter1](./haskell/chapter1/index.md)
 ### [Chapter2](./haskell/chapter2/index.md)
+### [Chapter3](./haskell/chapter3/index.md)
 
