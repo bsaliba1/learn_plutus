@@ -6,10 +6,10 @@
 - Type decleration is when you explicitly state the type of a function or variable
   - ex.
 
-    ```
-    removeNonUppercase :: [Char] -> [Char]
-    removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
-    ```
+	```haskell
+	removeNonUppercase :: [Char] -> [Char]
+	removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
+	```
 
 ### Common Types
   - `Int`: Whole numbers (max: 2147483647, min: -2147483648)
@@ -34,7 +34,7 @@
 ## Typeclasses
 - A typeclass is a sort of interface that defines some behavior for all the types contained in the typeclass
 - A type is part of a type class
-```
+```haskell
 ghci> :t (==)
 (==) :: (Eq a) => a -> a -> Bool
 ```
@@ -50,18 +50,18 @@ ghci> :t (==)
 
 #### `Ord` is for types that have an ordering
 #### `Show` is for presenting a type as a string
-	- most function for dealing with the `Show` typeclass is `show`
-	```
-	ghci> show 3
-	"3"
-	ghci> show True
-	"True"
-	```
+- most function for dealing with the `Show` typeclass is `show`
+```haskell
+ghci> show 3
+"3"
+ghci> show True
+"True"
+```
 
 #### `Read` is used for converting a string to a type
 - most function for dealing with the `Read` typeclass is `read`
 - Using implicit typing
-```
+```haskell
 ghci> read "True" || False
 True
 ghci> read "8.2" + 3.8
@@ -73,7 +73,7 @@ ghci> read "[1,2,3,4]" ++ [3]
 ```
 
 - Using explicit typing
-```
+```haskell
 ghci> read "5" :: Int
 5
 ghci> read "5" :: Float
@@ -89,7 +89,7 @@ ghci> read "(3, 'a')" :: (Int, Char)
 #### `Enum` members are sequentially ordered types
 - `succ` gets the next enum
 - `pred` gets the previous enum
-```
+```haskell
 ghci> ['a'..'e']
 "abcde"
 ghci> [LT .. GT]
@@ -101,7 +101,7 @@ ghci> succ 'B'
 ```
 
 #### `Bounded` members have an upper and a lower bound.
-```
+```haskell
 ghci> minBound :: Int
 -2147483648
 ghci> maxBound :: Char
@@ -119,7 +119,7 @@ False
 - whole numbers can act like any type contained in the `Num` typeclass
 - To join `Num`, a type must already be friends with `Show` and `Eq`.
 - A very useful function for dealing with numbers is fromIntegral
-```
+```haskell
 ghci> 20 :: Int
 20
 ghci> 20 :: Integer
