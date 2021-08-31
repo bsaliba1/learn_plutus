@@ -125,3 +125,24 @@ calcBmis :: (RealFloat a) => [(a, a)] -> [a]
 calcBmis xs = [bmi | (w, h) <- xs, let bmi = w / h ^ 2, bmi >= 25.0]
 ```
 
+## Case Expressions
+- Takes a variable, pattern matching it, evaluating pieces of code based on its value
+- These code snippets evaluate to the same thing
+```haskell
+head' :: [a] -> a
+head' [] = error "No head for empty lists!"
+head' (x:_) = x
+```
+```haskell
+head' :: [a] -> a
+head' xs = case xs of [] -> error "No head for empty lists!"
+                      (x:_) -> x
+```
+- Syntax:
+```haskell
+case expression of pattern -> result
+                   pattern -> result
+                   pattern -> result
+                   ...
+```
+
