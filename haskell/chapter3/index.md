@@ -62,8 +62,9 @@ a `myCompare` b
     | otherwise = LT
 ```
 
-## "Where"
+## "Where" Bindings
 - Used after function definition (and after guards if they exist) to define several names or functions, that are visible within the function and guards
+- `where` bindings are syntactic constructs
 ```haskell
 bmiTell :: (RealFloat a) => a -> a -> String
 bmiTell weight height
@@ -90,4 +91,37 @@ calcBmis xs = [bmi w h | (w, h) <- xs]
     where bmi weight height = weight / height ^ 2
 ```
 
+## "Let" Bindings
+- Lets you bind to variables at the end of a function and the whole function can see them
+```haskell
+cylinder :: (RealFloat a) => a -> a -> a
+cylinder r h =
+    let sideArea = 2 * pi * r * h
+        topArea = pi * r ^2
+    in  sideArea + 2 * topArea
+```
+
+- `let` bindings are expressions (this can be used almost anywhere)
+```haskell
+ghci> 4 * (let a = 9 in a + 1) + 2
+42
+```
+```haskell
+ghci> [let square x = x * x in (square 5, square 3, square 2)]
+[(25,9,4)]
+ghci> (let square x = x*x in (square 3, square 4, square 5), let foo = "Hey"; bar = " There!" in foo ++ bar)
+((9,16,25),"Hey There!")
+```
+
+- Can be used for pattern matching
+```haskell
+(let (a,b,c) = (1,2,3) in a+b+c) * 100
+600
+```
+
+- `let`s can be used in place of predicates in a list comprehension
+```haskell
+calcBmis :: (RealFloat a) => [(a, a)] -> [a]
+calcBmis xs = [bmi | (w, h) <- xs, let bmi = w / h ^ 2, bmi >= 25.0]
+```
 
