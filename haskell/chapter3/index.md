@@ -92,7 +92,7 @@ calcBmis xs = [bmi w h | (w, h) <- xs]
 ```
 
 ## "Let" Bindings
-- Lets you bind to variables at the end of a function and the whole function can see them
+- Let you bind to variables anywhere and are expressions themselves, but are very local, so they don't span across guards
 ```haskell
 cylinder :: (RealFloat a) => a -> a -> a
 cylinder r h =
