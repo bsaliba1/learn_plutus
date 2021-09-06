@@ -50,6 +50,10 @@ quicksort (x:xs) =
       biggerSorted = quicksort [a | a <- xs, a > x]
   in smallerSorted ++ [x] ++ biggerSorted
 
+-- Chapter 5
+applyTwice :: (a -> a) -> a -> a
+applyTwice f x = f (f x)
+
 -- Sample Problems
 -- Problem 1
 -- Get the last element in a list
