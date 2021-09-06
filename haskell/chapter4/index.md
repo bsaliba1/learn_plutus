@@ -16,7 +16,7 @@ maximum' (x:xs)
 ```
 
 ## Quicksort
-```
+```haskell
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
 quicksort (x:xs) =
