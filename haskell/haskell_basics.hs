@@ -43,6 +43,13 @@ elem' n lst
   | otherwise = elem' n xs
   where (x:xs) = lst
 
+quicksort :: (Ord a) => [a] -> [a]
+quicksort [] = []
+quicksort (x:xs) =
+  let smallerSorted = quicksort [a | a <- xs, a <= x]
+      biggerSorted = quicksort [a | a <- xs, a > x]
+  in smallerSorted ++ [x] ++ biggerSorted
+
 -- Sample Problems
 -- Problem 1
 -- Get the last element in a list
