@@ -75,6 +75,23 @@ filter' p (x:xs)
   | p x = x : filter' p xs
   | otherwise = filter' p xs
 
+collatz :: (Integral a) => a -> [a]
+collatz x
+  | x == 1 = [1]
+  | odd x = x: collatz (x * 3 + 1)
+  | otherwise = x: collatz (x `div` 2)
+
+numLongChains :: Int
+numLongChains = length (filter isLong collatzedLists)
+  where isLong ls = length ls > 15
+        collatzedLists = map collatz [1..100]
+
+sum'' :: (Num a) => [a] -> a
+sum'' xs = foldl (+) 0 xs
+
+elem'' :: (Eq a) => a -> [a] -> Bool
+elem'' n xs = foldl (\acc x -> acc || x == n) False xs
+
 -- Sample Problems
 -- Problem 1
 -- Get the last element in a list
