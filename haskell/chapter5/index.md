@@ -66,7 +66,6 @@ recursiveFunction f acc (x:xs) = acc + recursiveFunction f xs + (f x)
 -- Sum without fold
 sum' [] = 0
 sum' (x:xs) = x + sum xs
-
 -- Sum with fold
 sum'' :: (Num a) => [a] -> a
 sum'' xs = foldl (\acc x = acc +x ) 0 xs
