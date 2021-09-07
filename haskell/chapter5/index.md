@@ -1,5 +1,5 @@
 # Chapter 5
-[<- Back to Homepage](../../index.md)
+[⬅︎ Back to Homepage](../../index.md)
 
 ## Higher Order Functions
 - Definition: Haskell functions can take functions as parameters and return functions as return values.
