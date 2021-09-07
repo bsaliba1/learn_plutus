@@ -7,5 +7,4 @@
 ### [Chapter2](./haskell/chapter2/index.md)
 ### [Chapter3](./haskell/chapter3/index.md)
 ### [Chapter4](./haskell/chapter4/index.md)
-
-
+### [Chapter5](./haskell/chapter5/index.md)
