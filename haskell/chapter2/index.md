@@ -1,5 +1,5 @@
 # Chapter 2
-[<- Back to Homepage](../../index.md)
+[⬅︎ Back to Homepage](../../index.md)
 ## Types
 - Haskell is statically typed
 - Explicit types always start with a capital letter

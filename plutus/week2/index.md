@@ -1,5 +1,5 @@
 # Week 2
-[<- Back to Homepage](../../index.md)
+[⬅︎ Back to Homepage](../../index.md)
 
 ## Triggering Change
 - Smart contracts will never change state unless triggered by a transaction

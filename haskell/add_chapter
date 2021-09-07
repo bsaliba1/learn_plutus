@@ -5,4 +5,4 @@ new_file="chapter$1/index.md"
 mkdir "chapter$1"
 touch $new_file
 echo "# Chapter $1" >> $new_file
-echo "[<- Back to Homepage](../../index.md)" >> $new_file
+echo "[⬅︎ Back to Homepage](../../index.md)" >> $new_file

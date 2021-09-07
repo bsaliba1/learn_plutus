@@ -1,5 +1,5 @@
 # Chapter 1
-[<- Back to Homepage](../../index.md)
+[⬅︎ Back to Homepage](../../index.md)
 ## Reference
 http://learnyouahaskell.com/starting-out
 ## Compiler

@@ -1,5 +1,5 @@
 # Week 1
-[<- Back to Homepage](../../index.md)
+[⬅︎ Back to Homepage](../../index.md)
 ## Basic UTxO
 - UTxO = "Unspent Transaction Output Model"
 - Pieces of a transaction:

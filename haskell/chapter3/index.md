@@ -1,5 +1,5 @@
 # Chapter 3
-[<- Back to Homepage](../../index.md)
+[⬅︎ Back to Homepage](../../index.md)
 
 ## Pattern Matching
 - When defining functions, you can define separate function bodies for different patterns.

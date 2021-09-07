@@ -1,5 +1,5 @@
 # Chapter 4
-[<- Back to Homepage](../../index.md)
+[⬅︎ Back to Homepage](../../index.md)
 
 ## Recursion
 - Calling a function within a function
