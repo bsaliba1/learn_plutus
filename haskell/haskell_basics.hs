@@ -92,6 +92,9 @@ sum'' xs = foldl (+) 0 xs
 elem'' :: (Eq a) => a -> [a] -> Bool
 elem'' n xs = foldl (\acc x -> acc || x == n) False xs
 
+sum''' :: (Num a) => [a] -> a
+sum''' = foldl (+) 0
+
 -- Sample Problems
 -- Problem 1
 -- Get the last element in a list
@@ -113,3 +116,11 @@ elementAt lst index
   | index > 1 = elementAt xs (index-1)
   | otherwise = error "'elementAt' cannot take a negative index"
   where (x:xs) = lst
+
+f x = if (mod x 3 == 0) then "Fizz" else ""
+b x = if (mod x 5 == 0) then "Buzz" else ""
+fb x =  z ++ "\n"
+  let y = f x ++ b x
+      z = if y == "" then show x else y
+
+main = putStrLn $ foldl (++) "" $ map fb [1..100]

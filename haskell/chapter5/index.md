@@ -73,3 +73,55 @@ sum'' xs = foldl (\acc x = acc +x ) 0 xs
 
 - `foldl1` and `foldr1` don't need a starting value for the accumulator
 - `scanl` and `scanr` are like `foldl` and `foldr`, only they report all the intermediate accumulator states in the form of a list
+
+### Function Application
+- Two ways of doing function application
+  - Using a space `" "`
+  - Using the `$` function
+
+- `$` Defintion:
+```haskell
+($) :: (a -> b) -> a -> b
+f $ x = f x
+```
+
+- Regular function application with a space has high precedence so it is left associative (e.g `foo bar y` == `(foo bar) y`
+- Function application with the `$` function has low precedence so it is right associative (e.g `foo $ bar y` == `foo (bar y)`)
+- `$` can be treated like any other function
+```haskell
+ghci> map ($ 3) [(4+), (10*), (^2), sqrt]
+[7.0,30.0,9.0,1.7320508075688772]
+```
+
+### Function Composition
+- Used to combine two functions
+- Mathematical definition: `(f ◦ g)(x) = f(g(x))`
+- Uses the `.` function
+- `.` function is right associative (e.g `(f . g . h) x` == ` f (g (h x))`)
+- example
+```haskell
+-- Without composition
+ghci> map (\x -> negate (abs x)) [5,-3,-6,7,-3,2,-19,24]
+
+-- With composition
+ghci> map (negate . abs) [5,-3,-6,7,-3,2,-19,24]
+```
+
+- `.` function does not work with functions that take multiple params so multi-argument functions must be partially applied
+```haskell
+ghci> (sum . replicate 5 . max 6.7) 8.9
+44.5
+```
+
+### Point Free (Point*less*) Functions
+- A function which does not explicitly mention the points (values) of the space on which the function acts
+```haskell
+-- Not Point Free
+sum' :: (Num a) => [a] -> a
+sum' xs = foldl (+) 0 xs
+
+-- Point Free
+sum'' :: (Num a) => [a] -> a
+sum'' = foldl (+) 0
+```
+
