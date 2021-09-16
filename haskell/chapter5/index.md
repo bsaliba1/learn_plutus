@@ -102,7 +102,6 @@ ghci> map ($ 3) [(4+), (10*), (^2), sqrt]
 ```haskell
 -- Without composition
 ghci> map (\x -> negate (abs x)) [5,-3,-6,7,-3,2,-19,24]
-
 -- With composition
 ghci> map (negate . abs) [5,-3,-6,7,-3,2,-19,24]
 ```
@@ -119,7 +118,6 @@ ghci> (sum . replicate 5 . max 6.7) 8.9
 -- Not Point Free
 sum' :: (Num a) => [a] -> a
 sum' xs = foldl (+) 0 xs
-
 -- Point Free
 sum'' :: (Num a) => [a] -> a
 sum'' = foldl (+) 0
