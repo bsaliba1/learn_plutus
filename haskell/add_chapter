@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "## [Chapter $1](./haskell/chapter$1/index.md)">> ../index.md
+echo "### [Chapter $1](./haskell/chapter$1/index.md)">> ../index.md
 new_file="chapter$1/index.md"
 mkdir "chapter$1"
 touch $new_file

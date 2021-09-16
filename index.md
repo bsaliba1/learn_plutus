@@ -8,3 +8,4 @@
 ### [Chapter3](./haskell/chapter3/index.md)
 ### [Chapter4](./haskell/chapter4/index.md)
 ### [Chapter5](./haskell/chapter5/index.md)
+### [Chapter 6](./haskell/chapter6/index.md)
