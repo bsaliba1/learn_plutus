@@ -1,4 +1,4 @@
-# Chapter 4
+# Chapter 4 - Recursion
 [⬅︎ Back to Homepage](../../index.md)
 
 ## Recursion

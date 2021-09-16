@@ -1,4 +1,4 @@
-# Chapter 3
+# Chapter 3 - Function Syntax
 [⬅︎ Back to Homepage](../../index.md)
 
 ## Pattern Matching

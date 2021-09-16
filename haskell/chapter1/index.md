@@ -1,4 +1,4 @@
-# Chapter 1
+# Chapter 1 - Starting Out
 [⬅︎ Back to Homepage](../../index.md)
 ## Reference
 http://learnyouahaskell.com/starting-out

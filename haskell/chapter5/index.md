@@ -1,4 +1,4 @@
-# Chapter 5
+# Chapter 5 - High Order Functions
 [⬅︎ Back to Homepage](../../index.md)
 
 ## Higher Order Functions

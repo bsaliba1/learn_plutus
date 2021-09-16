@@ -1,4 +1,4 @@
-# Chapter 2
+# Chapter 2 - Types and Typeclasses
 [⬅︎ Back to Homepage](../../index.md)
 ## Types
 - Haskell is statically typed
