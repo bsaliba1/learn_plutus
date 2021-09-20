@@ -20,6 +20,7 @@
   - `Double`: Real floating point accurate up to 12 decimal places (double the precision!)
   - `Bool`: Boolean type with two values `True` or `False`
   - `Char`: Represents a character and is denoted by single quotes `''`
+  - `Ordering`: Comparison type with three values `LT`, `GT`, `EQ`
 
 ### Type Variables
 - Denoted as `a`,`b`,`c`, etc.

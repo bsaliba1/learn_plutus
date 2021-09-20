@@ -1,3 +1,5 @@
+import Data.Char
+
 -- Chapter 1
 doubleMe x = x + x
 doubleUs x y = doubleMe x + doubleMe y
@@ -95,6 +97,17 @@ elem'' n xs = foldl (\acc x -> acc || x == n) False xs
 sum''' :: (Num a) => [a] -> a
 sum''' = foldl (+) 0
 
+-- Chapter 6
+-- Caesar Cipher
+encode :: Int -> String -> String
+encode shift msg =
+  let asciiValues = map ord msg
+      shifted = map (+ shift) asciiValues
+  in map chr shifted
+
+decode :: Int -> String -> String
+decode shift msg = encode (negate shift) msg
+
 -- Sample Problems
 -- Problem 1
 -- Get the last element in a list
@@ -116,11 +129,3 @@ elementAt lst index
   | index > 1 = elementAt xs (index-1)
   | otherwise = error "'elementAt' cannot take a negative index"
   where (x:xs) = lst
-
-f x = if (mod x 3 == 0) then "Fizz" else ""
-b x = if (mod x 5 == 0) then "Buzz" else ""
-fb x =  z ++ "\n"
-  let y = f x ++ b x
-      z = if y == "" then show x else y
-
-main = putStrLn $ foldl (++) "" $ map fb [1..100]
