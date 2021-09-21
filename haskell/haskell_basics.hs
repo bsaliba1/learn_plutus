@@ -97,17 +97,6 @@ elem'' n xs = foldl (\acc x -> acc || x == n) False xs
 sum''' :: (Num a) => [a] -> a
 sum''' = foldl (+) 0
 
--- Chapter 6
--- Caesar Cipher
-encode :: Int -> String -> String
-encode shift msg =
-  let asciiValues = map ord msg
-      shifted = map (+ shift) asciiValues
-  in map chr shifted
-
-decode :: Int -> String -> String
-decode shift msg = encode (negate shift) msg
-
 -- Sample Problems
 -- Problem 1
 -- Get the last element in a list

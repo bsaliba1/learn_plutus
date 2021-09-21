@@ -83,3 +83,49 @@ DecimalNumber
 ghci> map generalCategory " \t\nA9?|"
 [Space,Control,Control,UppercaseLetter,DecimalNumber,OtherPunctuation,MathSymbol]
 ```
+
+### Data.Map
+- `fromList` - takes an association list and returns a map data type
+- `empty` - represents an empty map. It takes no arguments, it just returns an empty map
+- `insert` - takes a key, a value and a map and returns a new map that's just like the old one, only with the key and value inserted
+- `null` - checks if a map is empty
+- `size` - reports the size of a map
+- `lookup` - works like the Data.List lookup, only it operates on maps. It returns Just something if it finds something for the key and Nothing if it doesn't
+- `member` - is a predicate takes a key and a map and reports whether the key is in the map or not
+- `map` and `filter` - work much like their list equivalents. These functions operate on the value of the key value pair
+- `toList` - is the inverse of fromList.
+
+### Data.Set
+- Checking for membership, inserting, deleting, etc. is much faster than doing the same thing with lists
+- `fromList` - converts list to set
+- `toList` - converts set to list
+- `intersection` - checks common elements across two sets
+- `difference` - checks elements that exist in set1 but not set2
+- `union` - combines all elements in set1 and set2
+
+### Making a Module
+- You can only use functions that are exported by a module
+- Start by defining the module name
+- Define exported function names
+- Implement functions
+```haskell
+module Cube
+( volume
+, area
+) where
+
+import qualified Geometry.Cuboid as Cuboid
+
+volume :: Float -> Float
+volume side = Cuboid.volume side side side
+
+area :: Float -> Float
+area side = Cuboid.area side side side
+```
+
+- To give modules a hierarchical structure, make a directory with the top level module name and then have the individual files have submodule names:
+```bash
+|-> Geometry
+|		|-> Sphere # Defines Geometry.Sphere module
+|   |-> Cube # Defines Geometry.Cube module
+```
