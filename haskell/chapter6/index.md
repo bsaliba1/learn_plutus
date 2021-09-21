@@ -126,6 +126,6 @@ area side = Cuboid.area side side side
 - To give modules a hierarchical structure, make a directory with the top level module name and then have the individual files have submodule names:
 ```bash
 |-> Geometry
-|		|-> Sphere # Defines Geometry.Sphere module
+|   |-> Sphere # Defines Geometry.Sphere module
 |   |-> Cube # Defines Geometry.Cube module
 ```
