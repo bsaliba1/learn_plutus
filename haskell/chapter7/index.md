@@ -1,13 +1,17 @@
 # Chapter 7 - Making Types and Typeclasses
 [⬅︎ Back to Homepage](../../index.md)
 
-## Intro
+## Types
+### Intro
 - Keyword `data` is used to define new types
 ```haskell
 data [type_name] = [value_constructor]
 ```
 
 - `type_name` and the `value_constructor` have to be capital cased
+- everything before the the `=` is known as the **type constructor** & everything after is known as the **value constructor**
+- functions acting on a type take the type constructor in the type decleration
+- functions use the value constructor for pattern matching on the given arguments
 - example of `Bool` type decleration
 ```haskell
 data Bool = False | True
@@ -20,7 +24,7 @@ data Shape = Circle Float Float Float | Rectangle Float Float Float Float
 ```
 
 
-### Writing functions for these types
+#### Writing functions for these types
 ```haskell
 surface :: Shape -> Float
 surface (Circle _ _ r) = pi * r ^ 2
@@ -34,7 +38,7 @@ nudge (Circle (Point x y) r) a b = Circle (Point (x+a) (y+b)) r
 nudge (Rectangle (Point x1 y1) (Point x2 y2)) a b = Rectangle (Point (x1+a) (y1+b)) (Point (x2+a) (y2+b))
 ```
 
-## Exporting Data Types
+### Exporting Data Types
 ```haskell
 module Shapes
 ( Point(..)
@@ -49,7 +53,7 @@ module Shapes
   -  It's the same as writing Shape (Rectangle, Circle)
 - Opt not to export any value constructors for `Shape` by just writing `Shape` in the export statement
 
-## Record Syntax
+### Record Syntax
 - Used to create value accessor methods for custom data types
 - Example without record syntax
 ```haskell
@@ -86,7 +90,7 @@ data Person = Person { firstName :: String
                      } deriving (Show)
 ```
 
-## Type Parameters
+### Type Parameters
 - **type constructors** can take types as parameters to produce new types
 ```haskell
 data Maybe a = Nothing | Just a
@@ -108,3 +112,21 @@ Nothing :: Maybe a
 ghci> Just 10 :: Maybe Double
 Just 10.0
 ```
+
+- type constraints can be added to data type declerations (**not recommended**)
+```haskell
+data (Ord k) => Map k v = ...
+```
+
+## Typeclasses
+### Making a Type an Instance of a Typeclass
+- We can do this automatically using the `derive` keyword
+```haskell
+data Person = Person { firstName :: String
+                     , lastName :: String
+                     , age :: Int
+                     } deriving (Eq, Show)
+```
+
+- In this example, in order to derive the `Eq` and `Show` typeclass, every field contained in the `Person` data type (meaning `String` and `Int`) must be part of the `Eq` and `Show` typeclasses already
+

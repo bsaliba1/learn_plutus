@@ -9,3 +9,4 @@
 ### [Chapter 4 - Recursion](./haskell/chapter4/index.md)
 ### [Chapter 5 - High Order Functions](./haskell/chapter5/index.md)
 ### [Chapter 6 - Modules](./haskell/chapter6/index.md)
+### [Chapter 7 - Making Types and Typeclasses](./haskell/chapter7/index.md)
