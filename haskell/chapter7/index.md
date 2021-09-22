@@ -9,22 +9,23 @@ data [type_name] = [value_constructor]
 ```
 
 - `type_name` and the `value_constructor` have to be capital cased
-- everything before the the `=` is known as the **type constructor** & everything after is known as the **value constructor**
-- functions acting on a type take the type constructor in the type decleration
-- functions use the value constructor for pattern matching on the given arguments
-- example of `Bool` type decleration
+- Everything before the the `=` is known as the **type constructor** & everything after is known as the **value constructor**
+- Functions acting on a type take the type constructor in the type decleration
+- Functions use the value constructor for pattern matching on the given arguments
+- Example of `Bool` type decleration
 ```haskell
 data Bool = False | True
 ```
 
-- when we write a value constructor, we can optionally add some types after it and those types define the values it will contain
-- example of creating data types for shapes
+- When we write a value constructor, we can optionally add some types after it and those types define the values it will contain
+- Example of creating data types for shapes
 ```haskell
 data Shape = Circle Float Float Float | Rectangle Float Float Float Float
 ```
 
 
 #### Writing functions for these types
+- Example
 ```haskell
 surface :: Shape -> Float
 surface (Circle _ _ r) = pi * r ^ 2
@@ -39,6 +40,7 @@ nudge (Rectangle (Point x1 y1) (Point x2 y2)) a b = Rectangle (Point (x1+a) (y1+
 ```
 
 ### Exporting Data Types
+- Example
 ```haskell
 module Shapes
 ( Point(..)
@@ -91,13 +93,13 @@ data Person = Person { firstName :: String
 ```
 
 ### Type Parameters
-- **type constructors** can take types as parameters to produce new types
+- **Type constructors** can take types as parameters to produce new types
 ```haskell
 data Maybe a = Nothing | Just a
 ```
 
 - `a` is the type parameter here
-- example of using the `Maybe` type constructor
+- Example of using the `Maybe` type constructor
 ```haskell
 ghci> Just "Haha"
 Just "Haha"
@@ -113,7 +115,7 @@ ghci> Just 10 :: Maybe Double
 Just 10.0
 ```
 
-- type constraints can be added to data type declerations (**not recommended**)
+- Type constraints can be added to data type declerations (**not recommended**)
 ```haskell
 data (Ord k) => Map k v = ...
 ```
