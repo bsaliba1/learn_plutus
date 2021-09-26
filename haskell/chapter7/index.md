@@ -132,3 +132,75 @@ data Person = Person { firstName :: String
 
 - In this example, in order to derive the `Eq` and `Show` typeclass, every field contained in the `Person` data type (meaning `String` and `Int`) must be part of the `Eq` and `Show` typeclasses already
 
+- We can build a class to represent days quite simply
+```haskell
+data Day = Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday
+           deriving (Eq, Ord, Show, Read, Bounded, Enum)
+```
+
+- Because it's part of the `Show` and `Read` typeclasses, we can convert values of this type to and from strings.
+```haskell
+ghci> Wednesday
+Wednesday
+ghci> show Wednesday
+"Wednesday"
+ghci> read "Saturday" :: Day
+Saturday
+```
+
+- Because it's part of the `Eq` and `Ord` typeclasses, we can compare or equate days.
+```haskell
+ghci> Saturday == Sunday
+False
+ghci> Saturday == Saturday
+True
+ghci> Saturday > Friday
+True
+ghci> Monday `compare` Wednesday
+LT
+```
+
+- It's also part of `Bounded`, so we can get the lowest and highest day.
+```haskell
+ghci> minBound :: Day
+Monday
+ghci> maxBound :: Day
+Sunday
+```
+
+- It's also an instance of `Enum`. We can get predecessors and successors of days and we can make list ranges from them!
+```haskell
+ghci> succ Monday
+Tuesday
+ghci> pred Saturday
+Friday
+ghci> [Thursday .. Sunday]
+[Thursday,Friday,Saturday,Sunday]
+ghci> [minBound .. maxBound] :: [Day]
+[Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday]
+```
+
+### Type Synonyms
+- Allows us to give types different names (e.g `[Char] == String`)
+```haskell
+type String = [Char]
+```
+
+- Can be used to clarify what type variables are used for
+```haskell
+-- Without type synonym
+type PhoneBook = [(String,String)]
+-- With type synonym
+type PhoneNumber = String
+type Name = String
+type PhoneBook = [(Name,PhoneNumber)]
+```
+
+- Can be parameterized so that we can still access the types
+```haskell
+type AssocList k v = [(k,v)]
+foo :: (Eq k) => k -> AssocList k v -> Maybe v. AssocList
+```
+
+- Type synonyms can be partially applied
+- When we're interested in how some function failed or why, we usually use the result type of `Either a b`, where `a` is some sort of type that can tell us something about the possible failure and `b` is the type of a successful computation
